@@ -1,4 +1,4 @@
-package com.ram.wallet.service;
+package com.ram.digital_wallet.service;
 
 import com.ram.digital_wallet.dto.WalletBalanceResponse;
 import org.springframework.stereotype.Service;

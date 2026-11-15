@@ -2,7 +2,10 @@ package com.ram.digital_wallet.controller;
 
 import com.ram.digital_wallet.dto.WalletBalanceResponse;
 import com.ram.digital_wallet.service.WalletService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/wallets")
@@ -16,9 +19,7 @@ public class WalletController {
     }
 
     @GetMapping("/{walletId}/balance")
-    public WalletBalanceResponse getBalance(
-            @PathVariable Long walletId) {
-
+    public WalletBalanceResponse getBalance(@PathVariable Long walletId) {
         return walletService.getWalletBalance(walletId);
     }
 }
